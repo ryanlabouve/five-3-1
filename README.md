@@ -1,7 +1,14 @@
 # five-3-1
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This calculator helps practitioner's of [Jim Wendler's 5/3/1](https://www.google.com/search?q=jim+wendler+5%2F3%2F1) strength building program quickley calculate percentages of their training maxes.
+
+## A quick explaination
+
+* Jim's program runs off of a percentages of your 1RM.
+* Your 1RM is your "One Rep Max" or the heviest weight you _could_ only lift one time.
+* Each program begins by taking a percentage of your 1RM and then determining every subsequent lift as a percentage of that.
+
+e.g. 1RM Squat of 330 lbs. 90% TM (training max) would be 297. Then your workout might be 65% TM (297 * .65 = ~193) 5x5 (5 sets of 5 reps).
 
 ## Prerequisites
 
