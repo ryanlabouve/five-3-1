@@ -1,0 +1,53 @@
+<div style="float: left;">
+  <h1>{{name}}</h1>
+  <table>
+    <thead>
+      <tr>
+        <td>
+          Training max
+        </td>
+        <td>
+          Weight
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each tms as |tm|}}
+        <tr>
+          <td>
+            {{tm}}
+          </td>
+          <td>
+            {{mult tm max}}
+          </td>
+        </tr>
+      {{else}}
+        No trianing maxes
+      {{/each}}
+    </tbody>
+  </table>
+
+  {{#each tms as |tm|}}
+    <h2>{{name}} — TM {{tm}}</h2>
+    <table>
+      <tr>
+        <td>
+          Training Percentage
+        </td>
+        <td>
+          Weight
+        </td>
+      </tr>
+      {{#each tps as |tp|}}
+        <tr>
+          <td>
+            {{tp}}
+          </td>
+          <td>
+            {{floor (mult (mult tm max) tp)}}
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+  {{/each}}
+</div>
