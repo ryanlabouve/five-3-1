@@ -1,20 +1,50 @@
-{{li-ft
-  name="squat"
-  max=285
-  }}
+<div>
+  <h2>Customize</h2>
+  <h3>Lift Maxes:</h3>
+  <div style="float:left;">
+    <p>Squat</p>
+    {{input value=squatMax}}
+  </div>
+  <div style="float:left;">
+    <p>Deadlift</p>
+    {{input value=deadliftMax}}
+  </div>
+  <div style="float:left;">
+    <p>Press</p>
+    {{input value=pressMax}}
+  </div>
+  <div style="float:left;">
+    <p>bench</p>
+    {{input value=benchMax}}
+  </div>
+  <div style="clear:both;">&nbsp;</div>
+</div>
+TMS at app level: {{tms}}<br>
+{{#main-app
+  tms=tms
+  as |config|
+}}
+  {{li-ft
+    name="squat"
+    max=squatMax
+    tms=config.tms
+    }}
 
-{{li-ft
-  name="deadlift"
-  max=330
-  }}
+  {{li-ft
+    name="deadlift"
+    max=deadliftMax
+    tms=config.tms
+    }}
 
-{{li-ft
-  name="press"
-  max=165
-  }}
+  {{li-ft
+    name="press"
+    max=pressMax
+    tms=config.tms
+    }}
 
-{{li-ft
-  name="bench"
-  max=225
-  }}
-{{outlet}}
+  {{li-ft
+    name="bench"
+    max=benchMax
+    tms=config.tms
+    }}
+{{/main-app}}

@@ -1,0 +1,19 @@
+<div>
+  <h3>Training maxes</h3>
+  {{#each allTms as |trainingMaxPercentage|}}
+    <div>
+      <input
+        type="checkbox"
+        checked={{contains trainingMaxPercentage tms}}
+        onclick={{action 'toggleArrayElement' trainingMaxPercentage 'tms'}}
+      > {{trainingMaxPercentage}}
+    </div>
+  {{/each}}
+  {{tms}}
+</div>
+
+<div style="clear:both;">&nbsp;</div>
+{{yield (hash
+  tms=tms
+  tps=tps
+)}}
