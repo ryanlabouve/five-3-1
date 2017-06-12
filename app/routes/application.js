@@ -2,10 +2,10 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model({ squatMax, deadliftMax, pressMax, benchMax }) {
     return {
-      squatMax: squatMax || 285,
-      deadliftMax: deadliftMax || 330,
+      squatMax: squatMax || 305,
+      deadliftMax: deadliftMax || 350,
       pressMax: pressMax || 165,
-      benchMax: benchMax || 225,
+      benchMax: benchMax || 245,
     }
   },
 
