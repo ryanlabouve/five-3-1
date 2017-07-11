@@ -16,7 +16,7 @@ export const myQueryParams = new QueryParams({
     defaultValue: null,
   },
   tms: {
-    defaultValue: [],
+    defaultValue: [0.85],
     serialize(value) {
       return value.toString();
     },

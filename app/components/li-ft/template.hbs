@@ -1,12 +1,12 @@
-<div class="fl w-100 w-25-ns ">
-  <h1>{{name}}</h1>
-  <table>
+<div class="fl w-100 pa3-ns w-25-ns lh-copy">
+  <h1 class="tc">{{name}}</h1>
+  <table class="w-100 collapse mb5">
     <thead>
       <tr>
-        <td>
+        <td class="bb b--black-30 pv1">
           Training max
         </td>
-        <td>
+        <td class="bb b--black-30 pv1 tr">
           Weight
         </td>
       </tr>
@@ -14,11 +14,11 @@
     <tbody>
       {{#each tms as |tm|}}
         <tr>
-          <td>
+          <td class="bb b--black-05 pv1 f6">
             {{tm}}
           </td>
-          <td>
-            {{mult tm max}}
+          <td class="bb b--black-05 pv1 tr f6">
+            {{floor (mult tm max)}}
           </td>
         </tr>
       {{else}}
@@ -28,22 +28,22 @@
   </table>
 
   {{#each tms as |tm|}}
-    <h2>{{name}} — TM {{tm}}</h2>
-    <table>
+    <h2 class="tc">{{name}} — TM {{tm}}</h2>
+    <table class="w-100 lh-copy collapse mb5">
       <tr>
-        <td>
+        <td class="bb b--black-30 pv1">
           Training Percentage
         </td>
-        <td>
+        <td class="bb b--black-30 pv1 tr">
           Weight
         </td>
       </tr>
       {{#each tps as |tp|}}
         <tr>
-          <td>
+          <td class="bb b--black-05 pv1 f6">
             {{tp}}
           </td>
-          <td>
+          <td class="bb b--black-05 pv1 tr f6">
             {{floor (mult (mult tm max) tp)}}
           </td>
         </tr>
