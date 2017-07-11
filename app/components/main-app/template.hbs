@@ -2,7 +2,7 @@
   <h3>Training maxes:</h3>
   <div class="cf">
     {{#each allTms as |trainingMaxPercentage|}}
-      <div class="fl mr4">
+      <div class="fl ml3 mr3">
         <input
           type="checkbox"
           checked={{contains trainingMaxPercentage tms}}
@@ -13,7 +13,6 @@
   </div>
 </div>
 
-<div style="clear:both;">&nbsp;</div>
 {{yield (hash
   tms=tms
   tps=tps
