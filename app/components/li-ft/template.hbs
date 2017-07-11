@@ -15,7 +15,7 @@
       {{#each tms as |tm|}}
         <tr>
           <td class="bb b--black-05 pv1 f6">
-            {{tm}}
+            {{mult tm 100}}%
           </td>
           <td class="bb b--black-05 pv1 tr f6">
             {{floor (mult tm max)}}
@@ -32,7 +32,7 @@
     <table class="w-100 lh-copy collapse mb5">
       <tr>
         <td class="bb b--black-30 pv1">
-          Training Percentage
+          Training percentage
         </td>
         <td class="bb b--black-30 pv1 tr">
           Weight
@@ -41,7 +41,7 @@
       {{#each tps as |tp|}}
         <tr>
           <td class="bb b--black-05 pv1 f6">
-            {{tp}}
+            {{floor (mult tp 100)}}%
           </td>
           <td class="bb b--black-05 pv1 tr f6">
             {{floor (mult (mult tm max) tp)}}
