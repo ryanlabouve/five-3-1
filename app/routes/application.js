@@ -10,9 +10,12 @@ export default Ember.Route.extend({
   },
 
   setupController(controller, model) {
-    controller.set('squatMax', model.squatMax);
-    controller.set('deadliftMax', model.deadliftMax);
-    controller.set('pressMax', model.pressMax);
-    controller.set('benchMax', model.benchMax);
+    // Needed for QP's
+    Ember.run.later(() => {
+      controller.set('squatMax', model.squatMax);
+      controller.set('deadliftMax', model.deadliftMax);
+      controller.set('pressMax', model.pressMax);
+      controller.set('benchMax', model.benchMax);
+    });
   }
 });
