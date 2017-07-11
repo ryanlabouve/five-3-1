@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  tagName: '',
   allTms: [0.8, 0.85, 0.9, 0.95, 1.0],
 
   init() {
