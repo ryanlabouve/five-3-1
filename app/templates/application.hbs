@@ -3,25 +3,116 @@
     <div class="fl w-100 w-100-ns">
       <h2>5/3/1 Training Max Worksheet</h2>
       <p>
+        5/3/1 is a training methodology developed primarily by Jim Wendler. The main goal
+      </p>
+      <p>
         For more info checkout <a href="https://github.com/ryanlabouve/five-3-1">ryanlabouve/five-3-1.</a>
       </p>
       <h3 class="mb0">1RM's:</h3>
       <div class="cf">
         <div class="fl pa3-ns w-100 w-25-ns ">
-          <p>Squat</p>
-          {{input value=squatMax}}
+          <p class="mb1">Squat</p>
+          {{input  class="input-reset ba b--black-20 pa2 mb2 db w-100" value=squatMax}}
+          <div class="mt1 f6">
+            {{bump-max
+              bumpMaxAction=(action (mut squatMax))
+              currentMax=squatMax
+              bumpBy=-2.5
+              }} /
+            {{bump-max
+              bumpMaxAction=(action (mut squatMax))
+              currentMax=squatMax
+              bumpBy=2.5
+              }}
+            {{bump-max
+              bumpMaxAction=(action (mut squatMax))
+              currentMax=squatMax
+              bumpBy=5
+              }}
+            {{bump-max
+              bumpMaxAction=(action (mut squatMax))
+              currentMax=squatMax
+              bumpBy=10
+              }}
+          </div>
         </div>
         <div class="fl pa3-ns w-100 w-25-ns ">
-          <p>Deadlift</p>
-          {{input value=deadliftMax}}
+          <p class="mb1">Deadlift</p>
+          {{input  class="input-reset ba b--black-20 pa2 mb2 db w-100" value=deadliftMax}}
+          <div class="mt1 f6">
+            {{bump-max
+              bumpMaxAction=(action (mut deadliftMax))
+              currentMax=deadliftMax
+              bumpBy=-2.5
+              }} /
+            {{bump-max
+              bumpMaxAction=(action (mut deadliftMax))
+              currentMax=deadliftMax
+              bumpBy=2.5
+              }}
+            {{bump-max
+              bumpMaxAction=(action (mut deadliftMax))
+              currentMax=deadliftMax
+              bumpBy=5
+              }}
+            {{bump-max
+              bumpMaxAction=(action (mut deadliftMax))
+              currentMax=deadliftMax
+              bumpBy=10
+              }}
+          </div>
         </div>
         <div class="fl pa3-ns w-100 w-25-ns ">
-          <p>Press</p>
-          {{input value=pressMax}}
+          <p class="mb1">Press</p>
+          {{input class="input-reset ba b--black-20 pa2 mb2 db w-100"  value=pressMax}}
+          <div class="mt1 f6">
+            {{bump-max
+              bumpMaxAction=(action (mut pressMax))
+              currentMax=pressMax
+              bumpBy=-2.5
+              }} /
+            {{bump-max
+              bumpMaxAction=(action (mut pressMax))
+              currentMax=pressMax
+              bumpBy=2.5
+              }}
+            {{bump-max
+              bumpMaxAction=(action (mut pressMax))
+              currentMax=pressMax
+              bumpBy=5
+              }}
+            {{bump-max
+              bumpMaxAction=(action (mut pressMax))
+              currentMax=pressMax
+              bumpBy=10
+              }}
+          </div>
         </div>
         <div class="fl pa3-ns w-100 w-25-ns ">
-          <p>Bench</p>
-          {{input value=benchMax}}
+          <p class="mb1">Bench</p>
+          {{input class="input-reset ba b--black-20 pa2 mb2 db w-100" value=benchMax}}
+          <div class="mt1 f6">
+            {{bump-max
+              bumpMaxAction=(action (mut benchMax))
+              currentMax=benchMax
+              bumpBy=-2.5
+              }} /
+            {{bump-max
+              bumpMaxAction=(action (mut benchMax))
+              currentMax=benchMax
+              bumpBy=2.5
+              }}
+            {{bump-max
+              bumpMaxAction=(action (mut benchMax))
+              currentMax=benchMax
+              bumpBy=5
+              }}
+            {{bump-max
+              bumpMaxAction=(action (mut benchMax))
+              currentMax=benchMax
+              bumpBy=10
+              }}
+          </div>
         </div>
       </div>
     </div>
